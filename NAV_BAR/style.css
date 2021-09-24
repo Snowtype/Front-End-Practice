@@ -1,0 +1,30 @@
+/*드림코딩 엘리 프론트엔드 학습
+https://www.youtube.com/watch?v=X91jsJyZofw&t=405s*/
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #263343;
+    padding: 8px 12px;
+
+}
+
+.navbar__logo {
+    font-size: 24px;
+    color: white;
+}
+
+.navbar__menu {
+    display: flex;
+}
