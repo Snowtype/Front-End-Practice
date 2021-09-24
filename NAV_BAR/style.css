@@ -1,5 +1,8 @@
 /*드림코딩 엘리 프론트엔드 학습
 https://www.youtube.com/watch?v=X91jsJyZofw&t=405s*/
+/*
+반응형 웹
+*/
 
 body {
     margin: 0;
@@ -27,4 +30,20 @@ a {
 
 .navbar__menu {
     display: flex;
+}
+
+.navbar__icons {
+    list-style:none;
+    color: white;
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .naver__menu {
+        flex-direction: column;
+    }
 }
