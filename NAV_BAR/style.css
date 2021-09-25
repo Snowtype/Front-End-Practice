@@ -4,46 +4,95 @@ https://www.youtube.com/watch?v=X91jsJyZofw&t=405s*/
 반응형 웹
 */
 
+:root {
+    --text-color: #f0f4f5;
+    --background-color: #423131;
+    --accent-color: pink;
+
+}
+
 body {
     margin: 0;
+    font-family: 'Gemunu Libre', sans-serif;
+    
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #263343;
+    background-color:var(--background-color);
     padding: 8px 12px;
-
-
 }
 
 .navbar__logo {
     font-size: 24px;
-    color: white;
+    color: green;
+}
+
+.navbar__logo i {
+    color: orange; 
 }
 
 .navbar__menu {
     display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar__menu li {
+    padding: 8px 12px;
+}
+
+.navbar__meny li:hover {
+    background-color: orangered;
+    border-radius: 4px;
 }
 
 .navbar__icons {
-    list-style:none;
+    list-style: none;
     color: white;
     display: flex;
+    padding-left: 0;
+}
+
+.navbar__icons li {
+    padding: 8px 12px;
+}
+
+.navbar__toogleBtn {
+    display: none;  /*화면이 작아졌을 때만 나오게함. display: none*/
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: orange;
 }
 
 @media screen and (max-width: 768px) {
     .navbar {
         flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
     }
 
-    .naver__menu {
+    .navber__menu {
         flex-direction: column;
     }
+
+    .navbar__menu li {
+        padding: 8px 12px;
+    }
+    
+
+    .navbar__menu.active,
+    .navbar__icons.active {
+        display:flex
+    }
+    
 }
+
